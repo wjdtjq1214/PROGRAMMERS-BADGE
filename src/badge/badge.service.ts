@@ -19,6 +19,6 @@ export class BadgeService {
     fs.writeFileSync(__dirname + '/result_mini.svg', miniSvgStr);
     fs.writeFileSync(__dirname + '/result_full.svg', fullSvgStr);
 
-    // await commitFile();
+    await commitFile();
   }
 }
