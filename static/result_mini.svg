@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="551px" height="217px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+            .title {
+                color: #0078ff;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: bold;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+            }
+        
+            .desc {
+                color: #0078ff;
+                font-size: 2.5rem;
+                font-weight: bold;
+                line-height: 1.5rem;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+            }
+        
+            .desc-2 {
+                color: #0078ff;
+                font-size: 1rem;
+                font-weight: bold;
+                line-height: 1.5rem;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+            }
+        
+            .text, .desc {
+                animation: twinkling 4s ease-in-out infinite;
+            }
+        
+            @keyframes twinkling {
+                40% { opacity: 1; }
+                50% { opacity: 0.5; }
+                60% { opacity: 1; }
+                70% { opacity: 0.5; }
+                80% { opacity: 1; }
+            };
+        </style>
+        
+        <!-- 배경 SVG -->
+        <g><path style="opacity:1" fill="#fefefe" d="M -0.5,-0.5 C 183.167,-0.5 366.833,-0.5 275.25,-0.5C 275.25,71.8333 275.25,144.167 275.25,108.25C 366.833,108.25 183.167,108.25 -0.5,108.25"/></g>
+
+        <!-- 정복 중인 레벨 배경 SVG -->
+        <g><path style="opacity:1" fill="#ecf5ff" d="M 6.125,94.5 C 6.125,67.5 6.125,40.5 6.125,13.5 C 7.76511,12.6799 9.43178,11.8466 11.125,11 C 94.7917,10.3333 178.458,10.3333 262.125,11 C 265.625,11.8333 267.792,14 268.625,17.5 C 269.292,41.8333 269.292,66.1667 268.625,90.5 C 267.792,94 265.625,96.167 262.125,97 C 178.458,97.667 94.7917,97.667 11.125,97 C 9.43178,96.153 7.76511,95.32 6.125,94.5 Z" /></g>
+
+        <!-- 정복 중인 레벨 아이콘(1) SVG -->
+        <g><path style="opacity:1" fill="#bbdcfd" d="M 218.5,80.5 C 219.657,77.7273 220.324,74.7273 220.5,71.5C 222.49,63.5101 227.49,58.5101 235.5,56.5C 238.528,56.8473 241.194,58.014 243.5,60C 241.744,60.1405 240.078,59.6405 238.5,58.5C 229.247,62.6066 223.914,69.7733 222.5,80C 222.565,82.5259 223.232,84.8593 224.5,87C 221.07,86.3974 219.07,84.2307 218.5,80.5 Z"/></g>
+
+        <!-- 정복 중인 레벨 아이콘(2) SVG -->
+        <g><path style="opacity:1" fill="#cde9fd" d="M 241.5,77.5 C 240.833,77.5 240.5,77.8333 240.5,78.5C 238.628,81.5287 235.961,83.6954 232.5,85C 230.536,85.624 228.869,85.124 227.5,83.5C 225.021,73.7912 228.354,67.1245 237.5,63.5C 239.374,63.3898 240.874,64.0564 242,65.5C 242.497,69.5239 242.331,73.5239 241.5,77.5 Z"/></g>
+
+        <!-- 정복 중인 레벨 아이콘(3) SVG -->
+        <g><path style="opacity:1" fill="#fcfdfe" d="M 234.5,67.5 C 237.826,67.1622 239.493,68.6622 239.5,72C 238.334,76.434 237,76.2674 235.5,71.5C 232.832,72.515 232.166,74.1817 233.5,76.5C 235.017,75.0892 236.351,75.2559 237.5,77C 234.006,81.7713 231.34,81.6046 229.5,76.5C 229.904,72.7712 231.571,69.7712 234.5,67.5 Z"/></g>
+
+        <!-- 정복 중인 레벨 아이콘(4) SVG -->
+        <g><path style="opacity:1" fill="#82b5fe" d="M 220.5,71.5 C 220.324,74.7273 219.657,77.7273 218.5,80.5C 218.215,77.1709 218.882,74.1709 220.5,71.5 Z"/></g>
+
+        <!-- 정복 중인 레벨 아이콘(5) SVG -->
+        <g><path style="opacity:1" fill="#a3cbfe" d="M 240.5,78.5 C 240.5,77.8333 240.833,77.5 241.5,77.5C 243.391,78.5361 245.224,78.5361 247,77.5C 249.391,78.4291 251.225,79.9291 252.5,82C 251.681,83.3188 250.681,84.4855 249.5,85.5C 249.409,83.7769 249.075,81.7769 248.5,79.5C 247.167,79.5 245.833,79.5 244.5,79.5C 244.719,80.675 244.386,81.675 243.5,82.5C 242.575,81.3595 241.741,81.3595 241,82.5C 241.331,80.9813 241.164,79.648 240.5,78.5 Z"/></g>
+
+            <text text-anchor="middle" x="115" y="40" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >프로그래머스 스킬 레벨</text>
+            <text text-anchor="middle" x="50" y="80" class="desc" stroke="#none" stroke-width="1" >1</text>
+            <text text-anchor="middle" x="80" y="80" class="desc-2" stroke="#none" stroke-width="1" >레벨</text>
+        </svg>
+        
