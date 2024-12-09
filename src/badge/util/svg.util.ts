@@ -202,7 +202,7 @@ export const getFullSvgStr = (userData: UserData): string => {
             <text text-anchor="middle" x="340" y="45" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >현재 점수</text>
             <text text-anchor="middle" x="360" y="85" class="desc" stroke="#none" stroke-width="1" >${userData.ranking.score.toLocaleString('ko-KR')}</text>
             
-            <text text-anchor="middle" x="100" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >해결한 코딩 테스트</text>
+            <text text-anchor="middle" x="80" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >해결한 코딩 테스트</text>
             <text text-anchor="middle" x="65" y="190" class="desc" stroke="#none" stroke-width="1" >${userData.codingTest.solved}</text>
             <text text-anchor="middle" x="120" y="190" class="desc-2" stroke="#none" stroke-width="1" >문제</text>
             
