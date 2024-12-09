@@ -33,13 +33,13 @@ export const commitFile = async (): Promise<void> => {
     'config',
     '--global',
     'user.email',
-    'JH8459-PROGRAMMERS-BADGE@example.com',
+    'JH8459@example.com',
   ]);
   await execCmd('git', [
     'config',
     '--global',
     'user.name',
-    'JH8459-PROGRAMMERS-BADGE[bot]',
+    'PROGRAMMERS-BADGE [BOT]',
   ]);
   await execCmd('git', ['add', '.']);
   await execCmd('git', [
