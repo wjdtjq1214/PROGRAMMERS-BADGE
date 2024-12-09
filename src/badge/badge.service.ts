@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ProgrammersService } from '../programmers/programmers.service';
 import * as fs from 'fs';
+import * as path from 'path';
 import { UserData } from '../interface/programmers.interface';
 import { getMiniSvgStr, getFullSvgStr } from './util/svg.util';
 import { commitFile } from './util/commit.util';
@@ -16,8 +17,16 @@ export class BadgeService {
     const miniSvgStr: string = getMiniSvgStr(userData);
     const fullSvgStr: string = getFullSvgStr(userData);
 
-    fs.writeFileSync(__dirname + '/result_mini.svg', miniSvgStr);
-    fs.writeFileSync(__dirname + '/result_full.svg', fullSvgStr);
+    const staticDir = path.join(__dirname, '../../static');
+    const miniSvgPath = path.join(staticDir, 'result_mini.svg');
+    const fullSvgPath = path.join(staticDir, 'result_full.svg');
+
+    if (!fs.existsSync(staticDir)) {
+      fs.mkdirSync(staticDir, { recursive: true });
+    }
+
+    fs.writeFileSync(miniSvgPath, miniSvgStr);
+    fs.writeFileSync(fullSvgPath, fullSvgStr);
 
     await commitFile();
   }
