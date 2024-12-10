@@ -136,9 +136,11 @@ https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 �
            uses: peter-evans/repository-dispatch@v1
            with:
              token: ${{ secrets.GH_PAT }}
-             repository: JH8459/PROGRAMMERS-BADGE // {Github 계정명}/{레포지토리명} 입니다.
+             repository: {Github 계정명}/{레포지토리명}
              event-type: trigger-workflow
     ```
+
+    > `repository: {Github 계정명}/{레포지토리명}` 예시로 저의 경우엔 **JH8459/PROGRAMMERS-BADGE** 입니다.
 
   <br/>
 
