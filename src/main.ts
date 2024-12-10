@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const badgeService = app.get(BadgeService);
 
-  badgeService.createBadge();
+  await badgeService.createBadge();
 
   await app.listen(process.env.PORT ?? 3000);
 }

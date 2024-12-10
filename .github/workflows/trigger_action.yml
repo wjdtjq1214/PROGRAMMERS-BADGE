@@ -32,4 +32,11 @@ jobs:
           echo GH_REPOSITORY=${{ secrets.GH_REPOSITORY }} >> .env
           echo PROGRAMMERS_ID=${{ secrets.PROGRAMMERS_ID }} >> .env
           echo PROGRAMMERS_PW=${{ secrets.PROGRAMMERS_PW }} >> .env
-          timeout 60 npm run start
+
+      - name: Start application
+        run: |
+          npm run start &
+          sleep 60
+
+      - name: Terminate workflow
+        run: echo "Workflow finished after 60 seconds!"
