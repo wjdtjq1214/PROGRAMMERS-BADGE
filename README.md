@@ -1,99 +1,157 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+## 🤖 프로그래머스 랭킹 뱃지 자동 생성 봇
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 만들었습니다.
+  
+깃허브 프로필에 사용할 목적의 프로그래머스 랭킹 뱃지(.svg)를 자동으로 생성하고 업데이트 합니다.
+  
+[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리를 트리거로 사용하므로 설치되어 있어야합니다.
+  
+백준 허브에 연동된 상태에서 프로그래머스에서 알고리즘 풀이시 자동으로 뱃지가 생성되거나 업데이트됩니다.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<br/>
+<br/>
 
-## Description
+## ⚠️ 전제 조건
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리가 필요합니다.
 
-## Project setup
+깃허브 **PAT(Personal Access Token)** 필요합니다.
 
-```bash
-$ npm install
-```
+<br/>
+<br/>
 
-## Compile and run the project
+## 🧠 동작 원리
 
-```bash
-# development
-$ npm run start
+<details>
+  <summary>펼쳐보기</summary>
 
-# watch mode
-$ npm run start:dev
+  1. 프로그래머스에서 알고리즘 문제를 풀이합니다.
+  2. 백준 허브에 연동된 레포지토리에 자동으로 커밋됩니다.
+  
+      ![auto commit](https://github.com/user-attachments/assets/ce37c39f-abf1-4f0b-90d5-7eef5d116b9c)
+     
+  4. 백준 허브에 연동된 레포지토리에 커밋이 되면 미리 작성한 깃허브 액션이 동작합니다. (트리거를 동작시킬 간단한 액션입니다.)
+  
+     ![trigger action](https://github.com/user-attachments/assets/9438fa60-cbaf-4cce-8ed7-b0bfdccbba71)
+  
+  5. PROGRAMMERS-BADGE 레포지토리에 정의한 트리거 액션이 동작하며 미리 정의한 소스 코드가 동작하여 .svg 포맷의 프로그래머스 랭킹 뱃지가 자동 생성됩니다.
+</details>
 
-# production mode
-$ npm run start:prod
-```
+<br/>
+<br/>
 
-## Run tests
+## 🔎 결과물 미리보기
 
-```bash
-# unit tests
-$ npm run test
+기본형과 커스텀된 뱃지를 제공합니다. (커스텀 뱃지는 작업중입니다!)
 
-# e2e tests
-$ npm run test:e2e
+<details>
+  <summary>기본형</summary>
 
-# test coverage
-$ npm run test:cov
-```
+  <img width="450" height="180" src="https://raw.githubusercontent.com/JH8459/PROGRAMMERS-BADGE/master/static/result_full.svg"/>
+</details>
 
-## Deployment
+<details>
+  <summary><del>기본형 (색상 Ver.)</del></summary>
+  
+</details>
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+<details>
+  <summary><del>축소형</del></summary>
+  
+</details>
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+<details>
+  <summary><del>축소형 (색상 Ver.)</del></summary>
+  
+</details>
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+<br/>
+<br/>
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## ℹ️ 설치 방법
 
-## Resources
+#### 1. <a href="https://github.com/JH8459/PROGRAMMERS-BADGE" target="_blank">PROGRAMMERS-BADGE 프로젝트</a>를 포크합니다.
 
-Check out a few resources that may come in handy when working with NestJS:
+  ![fork](https://github.com/user-attachments/assets/0d68e181-41a4-4654-bc4c-32d166f9ce4f)
+  
+  <br/>
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### 2. PROGRAMMERS-BADGE 프로젝트에서 깃허브 액션에 사용될 시크릿 키를 등록합니다.
 
-## Support
+  ![secret_key](https://github.com/user-attachments/assets/58cb57f5-c06b-4cc9-b242-2189d10e4a4e)
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  - **GH_PAT:** `GitHub Personal Access Token` 값 입니다.
 
-## Stay in touch
+    > `ghp_....` 로 시작하곤합니다.
+  
+  - **GH_REPOSITORY:** `{Github 계정명}/{레포지토리명}` 
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+    > 예시로 저의 경우엔 **JH8459/PROGRAMMERS-BADGE** 입니다.
 
-## License
+  - **PROGRAMMERS_ID:** 프로그래머스 계정 ID입니다.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+    > 프로그래머스 이메일 주소이며 소셜 로그인으로 사용중이시더라도 등록해주셔야합니다.
+
+  - **PROGRAMMERS_PW:** 프로그래머스 계정 PW입니다.
+
+  <br/>
+
+#### 3. PROGRAMMERS-BADGE 프로젝트에서 액션을 활성화합니다.
+
+  ![action_enable](https://github.com/user-attachments/assets/99b7d0fc-8c59-4f0b-85aa-71f591ad01bc)
+
+  > 포크한 레포지토리의 액션은 기본으로 비활성화되어 있으므로 해당 버튼을 클릭하여 액션을 활성화시킵니다.
+
+  <br/>
+
+#### 4. 백준허브에 연동된 레포지토리에서 깃허브 액션에 사용될 시크릿 키를 등록합니다.
+
+  ![action_secret](https://github.com/user-attachments/assets/e55dc536-4764-4167-9d1e-687262c996b5)
+
+  - **GH_PAT:** `GitHub Personal Access Token` 값 입니다.
+
+    > `ghp_....` 로 시작하곤합니다.
+
+  <br/>
+
+#### 5. 백준허브에 연동된 레포지토리에서 액션을 활성화합니다.
+
+  ![action_enable](https://github.com/user-attachments/assets/b3902eef-cd91-4c89-b5c1-da0038b4ad8e)
+
+  - **set up a workflow yourself** 클릭 후 아래의 `dispatch_action.yml`을 복사해서 넣어줍니다.
+
+    ```yml
+    name: dispatch_action
+
+    on:
+     push:
+       branches:
+         - master
+    
+    jobs:
+     dispatch:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Trigger repository dispatch
+           uses: peter-evans/repository-dispatch@v1
+           with:
+             token: ${{ secrets.GH_PAT }}
+             repository: JH8459/PROGRAMMERS-BADGE // {Github 계정명}/{레포지토리명} 입니다.
+             event-type: trigger-workflow
+    ```
+
+  <br/>
+
+#### 6. 프로그래머스에서 문제 풀이 후 PROGRAMMERS-BADGE 프로젝트에서 결과물 확인
+
+  - 프로그래머스 문제 풀이 후 백준 허브에 연동된 레포지토리의 액션 로그를 확인한다.
+  - PROGRAMMERS-BADGE 프로젝트에서의 액션 로그를 확인한다.
+  - 위 과정에서 문제가 없었다면, PROGRAMMERS-BADGE 프로젝트에서 `static` 폴더에 .svg 포맷의 프로그래머스 랭킹 뱃지 결과물을 확인한다.
+  - 원하는 랭킹 뱃지 유형을 확인 후 깃허브 프로필에 링크를 붙혀넣는다.
+
+    > https://raw.githubusercontent.com/{Github 계정명}/{레포지토리명}/master/static/result_full.svg
+  
+<br/>
+<br/>
+
+
