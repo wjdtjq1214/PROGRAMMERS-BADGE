@@ -32,4 +32,4 @@ jobs:
           echo GH_REPOSITORY=${{ secrets.GH_REPOSITORY }} >> .env
           echo PROGRAMMERS_ID=${{ secrets.PROGRAMMERS_ID }} >> .env
           echo PROGRAMMERS_PW=${{ secrets.PROGRAMMERS_PW }} >> .env
-          npm run start
+          timeout 60 npm run start
