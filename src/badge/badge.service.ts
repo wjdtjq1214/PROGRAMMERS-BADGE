@@ -42,5 +42,7 @@ export class BadgeService {
     this.loggerService.log('✅ Create Programmers badge success');
 
     await commitFile(this.GH_REPOSITORY, this.GH_PAT);
+
+    this.loggerService.log('✅ Create Programmers badge success');
   }
 }
