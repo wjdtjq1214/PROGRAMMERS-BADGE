@@ -1,0 +1,35 @@
+name: trigger_action
+
+on:
+  push:
+    branches: [ "master" ]
+  repository_dispatch:
+    types: [ trigger-workflow ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.18.0'
+          cache: 'npm'
+        env: 
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          PROGRAMMERS_ID: ${{ secrets.PROGRAMMERS_ID }}
+          PROGRAMMERS_PW: ${{ secrets.PROGRAMMERS_PW }}
+      - run: npm install
+      - run: npm run build
+      - run: |
+          touch .env
+          echo GITHUB_REPOSITORY=${{ secrets.GITHUB_REPOSITORY }} >> .env
+          echo GH_PAT=${{ secrets.GH_PAT }} >> .env
+          echo PROGRAMMERS_ID=${{ secrets.PROGRAMMERS_ID }} >> .env
+          echo PROGRAMMERS_PW=${{ secrets.PROGRAMMERS_PW }} >> .env
+          npm run start
