@@ -25,6 +25,12 @@ export class ProgrammersService {
       this.configService.get<string>('PROGRAMMERS_PW') || '';
   }
 
+  /**
+   * 프로그래머스 로그인 메소드
+   * @description 프로그래머스 로그인 API 요청의 응답값 중 쿠키를 추출하여 문자열 배열 형태로 반환합니다.
+   * @function signInProgrammers
+   * @returns {Promise<string[]>}
+   */
   async signInProgrammers(): Promise<string[]> {
     try {
       const response = await this.httpService.axiosRef.post(
@@ -44,6 +50,12 @@ export class ProgrammersService {
     }
   }
 
+  /**
+   * 프로그래머스 유저 정보 조회 메소드
+   * @description 프로그래머스 유저 정보 조회 API를 헤더에 인증 쿠키를 담아 호출하여 유저 정보를 반환합니다.
+   * @function getProgrammersRecordInfo
+   * @returns {Promise<UserData>}
+   */
   async getProgrammersRecordInfo(): Promise<UserData> {
     const cookie: string[] = await this.signInProgrammers();
 

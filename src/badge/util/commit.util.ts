@@ -1,5 +1,12 @@
 import { spawn } from 'child_process';
 
+/**
+ * CLI 명령어를 실행합니다.
+ * @description CLI 명령어를 실행하고 종료 코드를 반환합니다.
+ * @param cmd 명령어
+ * @param args 명령어 인자
+ * @returns {Promise<number>}
+ */
 export const execCmd = async (
   cmd: string,
   args: string[] = [],
@@ -28,6 +35,13 @@ export const execCmd = async (
   });
 };
 
+/**
+ * 생성된 .svg 파일을 Github에 커밋합니다.
+ * @description Git 명령어를 이용하여 'PROGRAMMERS-BADGE [BOT]' 유저명으로 자동으로 커밋합니다.
+ * @param GH_REPOSITORY Github Repository
+ * @param GH_PAT Github Personal Access Token
+ * @returns {Promise<void>}
+ */
 export const commitFile = async (
   GH_REPOSITORY: string,
   GH_PAT: string,
