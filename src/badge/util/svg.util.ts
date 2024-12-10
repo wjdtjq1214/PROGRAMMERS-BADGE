@@ -1,5 +1,11 @@
 import { UserData } from '../../interface/programmers.interface';
 
+/**
+ * 뱃지(미니) SVG 문자열 생성 메소드
+ * @description 프로그래머스에서 받아온 데이터를 이용하여 뱃지(미니) SVG 문자열을 반환합니다.
+ * @param userData
+ * @returns {string}
+ */
 export const getMiniSvgStr = (userData: UserData): string => {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -70,6 +76,12 @@ export const getMiniSvgStr = (userData: UserData): string => {
         `;
 };
 
+/**
+ * 뱃지 SVG 문자열 생성 메소드
+ * @description 프로그래머스에서 받아온 데이터를 이용하여 뱃지 SVG 문자열을 반환합니다.
+ * @param userData
+ * @returns {string}
+ */
 export const getFullSvgStr = (userData: UserData): string => {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">

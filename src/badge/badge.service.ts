@@ -23,7 +23,7 @@ export class BadgeService {
 
   /**
    * 프로그래머스 뱃지 생성 메소드
-   * @description 프로그래머스에서 받아온 데이터를 이용하여 .svg 포맷의 뱃지를 생성하고 Github에 자동 커밋하여 액션을 트리거합니다.
+   * @description 프로그래머스에서 받아온 데이터를 이용하여 .svg 포맷의 뱃지를 생성하고 Github 저장소에 업로드할 수 있도록 커밋합니다.
    * @function createBadge
    * @returns {Promise<void>}
    */

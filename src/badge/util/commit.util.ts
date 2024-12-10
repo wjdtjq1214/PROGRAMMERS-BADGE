@@ -36,7 +36,7 @@ export const execCmd = async (
 };
 
 /**
- * 생성된 .svg 파일을 Github에 커밋합니다.
+ * 생성된 .svg 파일을 Github 저장소에 업로드합니다.
  * @description Git 명령어를 이용하여 'PROGRAMMERS-BADGE [BOT]' 유저명으로 자동으로 커밋합니다.
  * @param GH_REPOSITORY Github Repository
  * @param GH_PAT Github Personal Access Token
