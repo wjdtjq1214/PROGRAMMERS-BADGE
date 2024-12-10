@@ -4,7 +4,7 @@ https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 �
   
 깃허브 프로필에 사용할 목적의 프로그래머스 랭킹 뱃지(.svg)를 자동으로 생성하고 업데이트 합니다.
   
-[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리를 트리거로 사용하므로 설치되어 있어야합니다.
+[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리를 트리거로 사용하므로 미리 설치되어 있어야합니다.
   
 백준 허브에 연동된 상태에서 프로그래머스에서 알고리즘 풀이시 자동으로 뱃지가 생성되거나 업데이트됩니다.
 
@@ -13,7 +13,7 @@ https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 �
 
 ## ⚠️ 전제 조건
 
-[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리가 필요합니다.
+[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub) 익스텐션에 연동된 레포트지토리가 필요합니다.
 
 깃허브 **PAT(Personal Access Token)** 필요합니다.
 
