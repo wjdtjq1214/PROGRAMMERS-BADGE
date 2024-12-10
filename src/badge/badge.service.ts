@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger as LoggerService } from '@nestjs/common';
 import { ProgrammersService } from '../programmers/programmers.service';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -14,6 +14,7 @@ export class BadgeService {
 
   constructor(
     private readonly configService: ConfigService,
+    private readonly loggerService: LoggerService,
     private readonly programmersService: ProgrammersService,
   ) {
     this.GH_REPOSITORY = this.configService.get<string>('GH_REPOSITORY');
