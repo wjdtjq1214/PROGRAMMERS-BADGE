@@ -28,24 +28,38 @@ export const execCmd = async (
   });
 };
 
-export const commitFile = async (): Promise<void> => {
+export const commitFile = async (
+  GITHUB_REPOSITORY: string,
+  GH_PAT: string,
+): Promise<void> => {
+  if (!GITHUB_REPOSITORY || !GH_PAT) {
+    throw new Error('GITHUB_REPOSITORY or GH_PAT is not .env setting.');
+  }
+
   await execCmd('git', [
     'config',
     '--global',
     'user.email',
     'JH8459@example.com',
   ]);
+
   await execCmd('git', [
     'config',
     '--global',
     'user.name',
     'PROGRAMMERS-BADGE [BOT]',
   ]);
+
   await execCmd('git', ['add', '.']);
+
   await execCmd('git', [
     'commit',
     '-m',
     '깃허브의 프로그래머스 순위를 나타내는 지표를 svg 형식으로 제공합니다.',
   ]);
-  await execCmd('git', ['push']);
+
+  await execCmd('git', [
+    'push',
+    `https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git`,
+  ]);
 };
