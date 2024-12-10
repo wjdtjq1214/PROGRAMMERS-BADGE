@@ -9,15 +9,14 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class BadgeService {
-  private readonly GITHUB_REPOSITORY: string;
+  private readonly GH_REPOSITORY: string;
   private readonly GH_PAT: string;
 
   constructor(
     private readonly configService: ConfigService,
     private readonly programmersService: ProgrammersService,
   ) {
-    this.GITHUB_REPOSITORY =
-      this.configService.get<string>('GITHUB_REPOSITORY');
+    this.GH_REPOSITORY = this.configService.get<string>('GH_REPOSITORY');
     this.GH_PAT = this.configService.get<string>('GH_PAT');
   }
 
@@ -39,6 +38,6 @@ export class BadgeService {
     fs.writeFileSync(miniSvgPath, miniSvgStr);
     fs.writeFileSync(fullSvgPath, fullSvgStr);
 
-    await commitFile(this.GITHUB_REPOSITORY, this.GH_PAT);
+    await commitFile(this.GH_REPOSITORY, this.GH_PAT);
   }
 }

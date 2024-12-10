@@ -29,11 +29,11 @@ export const execCmd = async (
 };
 
 export const commitFile = async (
-  GITHUB_REPOSITORY: string,
+  GH_REPOSITORY: string,
   GH_PAT: string,
 ): Promise<void> => {
-  if (!GITHUB_REPOSITORY || !GH_PAT) {
-    throw new Error('GITHUB_REPOSITORY or GH_PAT is not .env setting.');
+  if (!GH_REPOSITORY || !GH_PAT) {
+    throw new Error('GH_REPOSITORY or GH_PAT is not .env setting.');
   }
 
   await execCmd('git', [
@@ -60,6 +60,6 @@ export const commitFile = async (
 
   await execCmd('git', [
     'push',
-    `https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git`,
+    `https://${GH_PAT}@github.com/${GH_REPOSITORY}.git`,
   ]);
 };
