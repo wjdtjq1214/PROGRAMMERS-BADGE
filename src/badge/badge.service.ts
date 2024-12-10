@@ -39,6 +39,8 @@ export class BadgeService {
     fs.writeFileSync(miniSvgPath, miniSvgStr);
     fs.writeFileSync(fullSvgPath, fullSvgStr);
 
+    this.loggerService.log('✅ Create badge success');
+
     await commitFile(this.GH_REPOSITORY, this.GH_PAT);
   }
 }
