@@ -1,5 +1,5 @@
 import { HttpService } from '@nestjs/axios';
-import { Injectable } from '@nestjs/common';
+import { Injectable, LoggerService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { UserData } from '../interface/programmers.interface';
 
@@ -12,6 +12,7 @@ export class ProgrammersService {
 
   constructor(
     private readonly configService: ConfigService,
+    private readonly loggerService: LoggerService,
     private readonly httpService: HttpService,
   ) {
     this.PROGRAMMERS_SIGN_IN_URL =
@@ -31,9 +32,15 @@ export class ProgrammersService {
         { user: { email: this.PROGRAMMERS_ID, password: this.PROGRAMMERS_PW } },
       );
 
+      this.loggerService.log(
+        `✅ Sign in success Programmers (ID: ${this.PROGRAMMERS_ID})`,
+      );
+
       return response.headers['set-cookie'];
-    } catch (error) {
-      console.log('Failed to sign in: ', error);
+    } catch {
+      this.loggerService.error(
+        `❌ Sign in fail Programmers (ID: ${this.PROGRAMMERS_ID}), Please check your ID or PW Github secret.`,
+      );
     }
   }
 
@@ -50,9 +57,13 @@ export class ProgrammersService {
         },
       );
 
+      this.loggerService.log(
+        `✅ Data fetching success (ID: ${this.PROGRAMMERS_ID})`,
+      );
+
       return response.data;
     } catch (error) {
-      console.log('Failed to data fatch: ', error);
+      this.loggerService.error(`❌ Data fetching fail. error reason: ${error}`);
     }
   }
 }
