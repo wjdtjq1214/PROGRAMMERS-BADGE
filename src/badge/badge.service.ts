@@ -43,6 +43,6 @@ export class BadgeService {
 
     await commitFile(this.GH_REPOSITORY, this.GH_PAT);
 
-    this.loggerService.log('✅ Create Programmers badge success');
+    this.loggerService.log('✅ Github Commit success');
   }
 }
