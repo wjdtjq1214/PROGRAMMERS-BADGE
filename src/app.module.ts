@@ -1,4 +1,4 @@
-import { Logger as LoggerService, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ProgrammersModule } from './programmers/programmers.module';
 import { BadgeModule } from './badge/badge.module';
@@ -9,7 +9,5 @@ import { BadgeModule } from './badge/badge.module';
     ProgrammersModule,
     BadgeModule,
   ],
-  providers: [LoggerService],
-  exports: [LoggerService],
 })
 export class AppModule {}

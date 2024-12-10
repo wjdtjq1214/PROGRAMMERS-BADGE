@@ -1,5 +1,5 @@
 import { HttpService } from '@nestjs/axios';
-import { Injectable, LoggerService } from '@nestjs/common';
+import { Injectable, Logger as LoggerService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { UserData } from '../interface/programmers.interface';
 
