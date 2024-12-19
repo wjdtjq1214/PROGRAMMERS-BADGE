@@ -13,7 +13,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
 <style>
             .title {
                 color: #0078ff;
-                font-size: 1rem;
+                font-size: 1.25rem;
                 line-height: 1.5rem;
                 font-weight: bold;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -21,7 +21,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
         
             .desc {
                 color: #0078ff;
-                font-size: 2.5rem;
+                font-size: 1rem;
                 font-weight: bold;
                 line-height: 1.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -52,12 +52,13 @@ export const getMiniSvgStr = (userData: UserData): string => {
         <g><path style="opacity:1" fill="none" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
 
         <!-- 색상 배경 SVG -->
-        <g><path style="opacity:1" fill="#ecf5ff" d="M 35,8.5 L 315,8.5 Q 330,8.5 330,23.5 L 330,146.5 Q 330,161.5 315,161.5 L 35,161.5 Q 20,161.5 20,146.5 L 20,23.5 Q 20,8.5 35,8.5 Z"/></g>
+        <g><path style="opacity:1" fill="#ecf5ff" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
 
-        <text text-anchor="middle" x="115" y="40" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >프로그래머스 스킬 레벨</text>
-        <text text-anchor="middle" x="50" y="80" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
-        <text text-anchor="middle" x="80" y="80" class="desc-2" stroke="#none" stroke-width="1" >레벨</text>
-        
+        <text text-anchor="middle" x="115" y="40" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >${userData.name}</text>
+
+        <text text-anchor="middle" x="50" y="80" class="desc-2" stroke="#none" stroke-width="1" >level </text>
+        <text text-anchor="middle" x="80" y="80" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
+
         </svg>
         `;
 };
