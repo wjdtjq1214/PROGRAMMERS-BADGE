@@ -15,45 +15,28 @@ export const getMiniSvgStr = (userData: UserData): string => {
                 font-size: 3rem;
                 font-weight: 1000;
                 font-family: 'Noto Sans KR', sans-serif;
-                animation: delayFadeIn 2s ease-in-out forwards;
             }
 
             .title_id {
                 font-size: 1.3rem;
                 font-weight: 1000;
                 font-family: 'Noto Sans KR', sans-serif;
-                animation: fadeIn 1s ease-in-out forwards
             }
         
             .sub_title {
                 font-size: 1rem;
                 font-weight: 700;
                 font-family: 'Noto Sans KR', sans-serif;
-                animation: delayFadeIn 2s ease-in-out forwards;
             }
 
             .value {
                 font-size: 1rem;
                 font-weight: 500;
                 font-family: 'Noto Sans KR', sans-serif;
-                animation: delayFadeIn 2s ease-in-out forwards;
             }
-        
-            .text, .title_no {
-                animation: twinkling 4s ease-in-out infinite;
-            }
-        
-            @keyframes twinkling {
-                40% { opacity: 1; }
-                50% { opacity: 0.5; }
-                60% { opacity: 1; }
-                70% { opacity: 0.5; }
-                80% { opacity: 1; }
-            };
 
-            @keyframes fadeIn {
-                0% { opacity: 0; }
-                100% { opacity: 1; }
+            .group {
+                animation: delayFadeIn 2s ease-in-out forwards
             }
 
             @keyframes delayFadeIn {
@@ -74,8 +57,8 @@ export const getMiniSvgStr = (userData: UserData): string => {
         <!-- 색상 배경 SVG -->
         <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color: #4c8de4; stop-opacity: 1" />
-            <stop offset="50%" style="stop-color: #4d98e6; stop-opacity: 1" />
+            <stop offset="0%" style="stop-color: #4e8ddf; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #4794e6; stop-opacity: 1" />
             <stop offset="100%" style="stop-color: #0078ff; stop-opacity: 1" />
             </linearGradient>
         </defs>
@@ -85,23 +68,22 @@ export const getMiniSvgStr = (userData: UserData): string => {
             d="M 15,0 L 335,0 Q 370,0 370,30 L 370,140 Q 370,170 335,170 L 15,170 Q 0,170 0,140 L 0,30 Q 0,0 15,0 Z"
         />
 
-        <g style="animation-delay: 100ms;">
-            <text text-anchor="middle" dominant-baseline="middle" x="80" y="85" class="title_no" style="fill:#ffffff;">${userData.skillCheck.level}</text>
-
-            <text text-anchor="start" x="140" y="60" class="title_id">${userData.name}</text>
+        <g class="group">
+            <text text-anchor="middle" dominant-baseline="middle" x="70" y="85" class="title_no" style="fill:#ffffff;">${userData.skillCheck.level}</text>
+            <text text-anchor="start" x="140" y="60" class="title_id" style="fill:#ffffff;">${userData.name}</text>
         </g>
 
-        <g style="animation-delay: 500ms;">
+        <g class="group" style="animation-delay: 400ms">
             <text text-anchor="start" x="140" y="100" class="sub_title" style="fill:#ffffff;">Score</text>
             <text text-anchor="start" x="230" y="100" class="value" style="fill:#ffffff;">${userData.career.score.toLocaleString()}</text>
         </g>
 
-        <g style="animation-delay: 800ms;">
+        <g class="group" style="animation-delay: 800ms">
             <text text-anchor="start" x="140" y="120" class="sub_title" style="fill:#ffffff;">Solved</text>
             <text text-anchor="start" x="230" y="120" class="value" style="fill:#ffffff;">${userData.codingTest.solved.toLocaleString()}</text>
         </g>
 
-        <g style="animation-delay: 1100ms;">
+        <g class="group" style="animation-delay: 1200ms">
             <text text-anchor="start" x="140" y="140" class="sub_title" style="fill:#ffffff;">Rank</text>
             <text text-anchor="start" x="230" y="140" class="value" style="fill:#ffffff;">${userData.ranking.rank.toLocaleString()}</text>
         </g>
