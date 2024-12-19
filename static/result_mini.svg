@@ -11,7 +11,7 @@
             }
         
             .desc {
-                color: #0078ff;
+                color: #ffffff;
                 font-size: 3rem;
                 font-weight: bold;
                 line-height: 4.5rem;
@@ -19,7 +19,7 @@
             }
         
             .desc-2 {
-                color: #0078ff;
+                color: #ffffff;
                 font-size: 1rem;
                 font-weight: bold;
                 line-height: 1.5rem;
@@ -27,7 +27,7 @@
             }
 
             .desc-3 {
-                color: #0078ff;
+                color: #ffffff;
                 font-size: 1rem;
                 line-height: 1.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -48,32 +48,35 @@
         </style>
         
         <!-- 배경 SVG -->
-        <g>
         <path 
             style="opacity:1" 
             fill="none" 
             d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z" 
         />
-        </g>
 
         <!-- 색상 배경 SVG -->
-        <g>
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: #4c8de4; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #4d98e6; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #0078ff; stop-opacity: 1" />
+            </linearGradient>
+        </defs>
         <path 
             style="opacity:1" 
-            fill="#ecf5ff" 
-            d="M 15,0 L 335,0 Q 350,0 350,15 L 350,155 Q 350,170 335,170 L 15,170 Q 0,170 0,155 L 0,15 Q 0,0 15,0 Z" 
+            fill="url(#grad1)"
+            d="M 15,0 L 335,0 Q 370,0 370,30 L 370,140 Q 370,170 335,170 L 15,170 Q 0,170 0,140 L 0,30 Q 0,0 15,0 Z"
         />
-        </g>
 
         <text text-anchor="middle" dominant-baseline="middle" x="50" y="85" class="desc" stroke="#none" stroke-width="1" >1</text>
 
         <text text-anchor="start" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >JH8459</text>
 
         <text text-anchor="start" x="110" y="100" class="desc-2" stroke="#none" stroke-width="1" >Score</text>
-        <text text-anchor="start" x="220" y="90" class="desc-3" stroke="#none" stroke-width="1" >70</text>
+        <text text-anchor="start" x="220" y="100" class="desc-3" stroke="#none" stroke-width="1" >70</text>
 
         <text text-anchor="start" x="110" y="120" class="desc-2" stroke="#none" stroke-width="1" >Solved</text>
-        <text text-anchor="start" x="220" y="110" class="desc-3" stroke="#none" stroke-width="1" >231</text>
+        <text text-anchor="start" x="220" y="120" class="desc-3" stroke="#none" stroke-width="1" >231</text>
 
         <text text-anchor="start" x="110" y="140" class="desc-2" stroke="#none" stroke-width="1" >Rank</text>
         <text text-anchor="start" x="220" y="140" class="desc-3" stroke="#none" stroke-width="1" >15,828</text>
