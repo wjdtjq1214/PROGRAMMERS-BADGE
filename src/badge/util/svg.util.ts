@@ -96,22 +96,22 @@ export const getMiniSvgStr = (userData: UserData): string => {
             <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="130 ; 130 ; 110"/>
         </line>
 
-        <g class="group" style="animation-delay: 0ms">
-            <text text-anchor="middle" dominant-baseline="middle" x="70" y="85" class="title_no" style="fill:#ffffff;">${userData.skillCheck.level}</text>
+        <g class="group">
+            <text text-anchor="middle" dominant-baseline="middle" x="65" y="85" class="title_no" style="fill:#ffffff;">${userData.skillCheck.level}</text>
             <text text-anchor="start" x="140" y="60" class="title_id" style="fill:#ffffff;">${userData.name}</text>
         </g>
 
-        <g class="group" style="animation-delay: 400ms">
+        <g class="group">
             <text text-anchor="start" x="140" y="100" class="sub_title" style="fill:#ffffff;">Score</text>
             <text text-anchor="start" x="230" y="100" class="value" style="fill:#ffffff;">${userData.career.score.toLocaleString()}</text>
         </g>
 
-        <g class="group" style="animation-delay: 800ms">
+        <g class="group">
             <text text-anchor="start" x="140" y="120" class="sub_title" style="fill:#ffffff;">Solved</text>
             <text text-anchor="start" x="230" y="120" class="value" style="fill:#ffffff;">${userData.codingTest.solved.toLocaleString()}</text>
         </g>
 
-        <g class="group" style="animation-delay: 1200ms">
+        <g class="group">
             <text text-anchor="start" x="140" y="140" class="sub_title" style="fill:#ffffff;">Rank</text>
             <text text-anchor="start" x="230" y="140" class="value" style="fill:#ffffff;">${userData.ranking.rank.toLocaleString()}</text>
         </g>
