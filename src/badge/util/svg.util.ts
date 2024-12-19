@@ -21,9 +21,9 @@ export const getMiniSvgStr = (userData: UserData): string => {
         
             .desc {
                 color: #0078ff;
-                font-size: 2rem;
+                font-size: 3rem;
                 font-weight: bold;
-                line-height: 1.5rem;
+                line-height: 4.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
         
@@ -74,13 +74,12 @@ export const getMiniSvgStr = (userData: UserData): string => {
         />
         </g>
 
-        <text text-anchor="middle" x="50" y="65" class="desc-2" stroke="#none" stroke-width="1" >level</text>
-        <text text-anchor="middle" x="60" y="100" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
+        <text text-anchor="middle" dominant-baseline="middle" x="175" y="85" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
 
         <text text-anchor="middle" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >${userData.name}</text>
 
-        <text text-anchor="middle" x="110" y="90" class="desc-2" stroke="#none" stroke-width="1" >rank</text>
-        <text text-anchor="middle" x="160" y="90" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.rank}</text>
+        <text text-anchor="start" x="130" y="90" class="desc-2" stroke="#none" stroke-width="1" >Rank</text>
+        <text text-anchor="start" x="200" y="90" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.rank}</text>
 
         </svg>
         `;
