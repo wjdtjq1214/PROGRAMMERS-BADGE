@@ -8,9 +8,9 @@ import { UserData } from '../../interface/programmers.interface';
  */
 export const getMiniSvgStr = (userData: UserData): string => {
   return `<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>
             .title {
                 color: #0078ff;
                 font-size: 1.25rem;
@@ -21,9 +21,9 @@ export const getMiniSvgStr = (userData: UserData): string => {
         
             .desc {
                 color: #0078ff;
-                font-size: 1rem;
+                font-size: 2rem;
                 font-weight: bold;
-                line-height: 2.5rem;
+                line-height: 1.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
         
@@ -53,20 +53,33 @@ export const getMiniSvgStr = (userData: UserData): string => {
                 70% { opacity: 0.5; }
                 80% { opacity: 1; }
             };
+
         </style>
         
         <!-- 배경 SVG -->
-        <g><path style="opacity:1" fill="none" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
+        <g>
+        <path 
+            style="opacity:1" 
+            fill="none" 
+            d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z" 
+        />
+        </g>
 
         <!-- 색상 배경 SVG -->
-        <g><path style="opacity:1" fill="#ecf5ff" d="M 15,0 L 335,0 Q 350,0 350,15 L 350,155 Q 350,170 335,170 L 15,170 Q 0,170 0,155 L 0,15 Q 0,0 15,0 Z"/></g>
+        <g>
+        <path 
+            style="opacity:1" 
+            fill="#ecf5ff" 
+            d="M 15,0 L 335,0 Q 350,0 350,15 L 350,155 Q 350,170 335,170 L 15,170 Q 0,170 0,155 L 0,15 Q 0,0 15,0 Z" 
+        />
+        </g>
 
         <text text-anchor="middle" x="50" y="65" class="desc-2" stroke="#none" stroke-width="1" >level</text>
         <text text-anchor="middle" x="60" y="100" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
 
         <text text-anchor="middle" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >${userData.name}</text>
 
-        <text text-anchor="middle" x=110" y="90" class="desc-2" stroke="#none" stroke-width="1" >rank</text>
+        <text text-anchor="middle" x="110" y="90" class="desc-2" stroke="#none" stroke-width="1" >rank</text>
         <text text-anchor="middle" x="160" y="90" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.rank}</text>
 
         </svg>
