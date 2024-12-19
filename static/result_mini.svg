@@ -59,7 +59,35 @@
             d="M 15,0 L 335,0 Q 370,0 370,30 L 370,140 Q 370,170 335,170 L 15,170 Q 0,170 0,140 L 0,30 Q 0,0 15,0 Z"
         />
 
-        <g class="group">
+        <line x1="34" y1="50" x2="34" y2="105" stroke-width="2" stroke="white">
+            <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="50 ; 50 ; 105"/>
+        </line>
+
+        <line x1="34" y1="105" x2="67" y2="125" stroke-width="2" stroke="white">
+            <animate attributeName="x2" dur="1s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="34 ; 34 ; 67"/>
+            <animate attributeName="y2" dur="1s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="105 ; 105 ; 125"/>
+        </line>
+
+        <line x1="67" y1="125" x2="100" y2="105" stroke-width="2" stroke="white">
+            <animate attributeName="x2" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.83333 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 100"/>
+            <animate attributeName="y2" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.83333 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="125 ; 125 ; 105"/>
+        </line>
+
+        <line x1="100" y1="105" x2="100" y2="50" stroke-width="2" stroke="white">
+            <animate attributeName="y2" dur="1.5s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="105 ; 105 ; 50"/>
+        </line>
+
+        <line x1="67" y1="130" x2="34" y2="110" stroke-width="2" stroke="white">
+            <animate attributeName="x2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 34"/>
+            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="130 ; 130 ; 110"/>
+        </line>
+
+        <line x1="67" y1="130" x2="100" y2="110" stroke-width="2" stroke="white">
+            <animate attributeName="x2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 100"/>
+            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="130 ; 130 ; 110"/>
+        </line>
+
+        <g class="group" style="animation-delay: 0ms">
             <text text-anchor="middle" dominant-baseline="middle" x="70" y="85" class="title_no" style="fill:#ffffff;">1</text>
             <text text-anchor="start" x="140" y="60" class="title_id" style="fill:#ffffff;">JH8459</text>
         </g>
