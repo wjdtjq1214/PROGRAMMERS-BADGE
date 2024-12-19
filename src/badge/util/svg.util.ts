@@ -52,7 +52,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
         <g><path style="opacity:1" fill="none" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
 
         <!-- 색상 배경 SVG -->
-        <g><path style="opacity:1" fill="#ecf5ff" d="M 15,0 L 300,0 Q 315,0 315,15 L 315,138 Q 315,153 300,153 L 15,153 Q 0,153 0,138 L 0,15 Q 0,0 15,0 Z"/></g>
+        <g><path style="opacity:1" fill="#ecf5ff" d="M 35,8.5 L 315,8.5 Q 330,8.5 330,23.5 L 330,146.5 Q 330,161.5 315,161.5 L 35,161.5 Q 20,161.5 20,146.5 L 20,23.5 Q 20,8.5 35,8.5 Z"/></g>
 
         <text text-anchor="middle" x="115" y="40" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >프로그래머스 스킬 레벨</text>
         <text text-anchor="middle" x="50" y="80" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
