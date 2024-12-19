@@ -78,8 +78,14 @@ export const getMiniSvgStr = (userData: UserData): string => {
 
         <text text-anchor="start" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >${userData.name}</text>
 
-        <text text-anchor="start" x="110" y="90" class="desc-2" stroke="#none" stroke-width="1" >Rank</text>
-        <text text-anchor="start" x="250" y="90" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.toLocaleString()}</text>
+        <text text-anchor="start" x="110" y="100" class="desc-2" stroke="#none" stroke-width="1" >Score</text>
+        <text text-anchor="start" x="220" y="90" class="desc-3" stroke="#none" stroke-width="1" >${userData.career.score.toLocaleString()}</text>
+
+        <text text-anchor="start" x="110" y="120" class="desc-2" stroke="#none" stroke-width="1" >Solved</text>
+        <text text-anchor="start" x="220" y="110" class="desc-3" stroke="#none" stroke-width="1" >${userData.codingTest.solved.toLocaleString()}</text>
+
+        <text text-anchor="start" x="110" y="140" class="desc-2" stroke="#none" stroke-width="1" >Rank</text>
+        <text text-anchor="start" x="220" y="140" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.rank.toLocaleString()}</text>
 
         </svg>
         `;
