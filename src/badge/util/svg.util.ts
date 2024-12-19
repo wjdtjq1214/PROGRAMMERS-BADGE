@@ -47,26 +47,15 @@ export const getMiniSvgStr = (userData: UserData): string => {
 
         </style>
         
-        <!-- 배경 SVG -->
-        <path 
-            style="opacity:1" 
-            fill="none" 
-            d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z" 
-        />
-
-        <!-- 색상 배경 SVG -->
+        <!-- 색상 배경 -->
         <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color: #4e8ddf; stop-opacity: 1" />
-            <stop offset="50%" style="stop-color: #4794e6; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: #0078ff; stop-opacity: 1" />
+            <stop offset="0%" style="stop-color: #808080; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #3c3c3c; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #000000; stop-opacity: 1" />
             </linearGradient>
         </defs>
-        <path 
-            style="opacity:1" 
-            fill="url(#grad1)"
-            d="M 15,0 L 335,0 Q 370,0 370,30 L 370,140 Q 370,170 335,170 L 15,170 Q 0,170 0,140 L 0,30 Q 0,0 15,0 Z"
-        />
+        <rect width="350" height="170" rx="10" ry="10" fill="url(#grad)"/>
 
         <line x1="34" y1="50" x2="34" y2="105" stroke-width="2" stroke="white">
             <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="50 ; 50 ; 105"/>
