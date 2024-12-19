@@ -9,7 +9,7 @@ import { UserData } from '../../interface/programmers.interface';
 export const getMiniSvgStr = (userData: UserData): string => {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="275px" height="108px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
             .title {
                 color: #0078ff;
@@ -49,7 +49,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
         </style>
         
         <!-- 배경 SVG -->
-        <g><path style="opacity:1" fill="#fefefe" d="M -0.5,-0.5 C 183.167,-0.5 366.833,-0.5 275.25,-0.5C 275.25,71.8333 275.25,144.167 275.25,108.25C 366.833,108.25 183.167,108.25 -0.5,108.25"/></g>
+        <g><path style="opacity:1" fill="none" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
 
         <!-- 정복 중인 레벨 배경 SVG -->
         <g><path style="opacity:1" fill="#ecf5ff" d="M 6.125,94.5 C 6.125,67.5 6.125,40.5 6.125,13.5 C 7.76511,12.6799 9.43178,11.8466 11.125,11 C 94.7917,10.3333 178.458,10.3333 262.125,11 C 265.625,11.8333 267.792,14 268.625,17.5 C 269.292,41.8333 269.292,66.1667 268.625,90.5 C 267.792,94 265.625,96.167 262.125,97 C 178.458,97.667 94.7917,97.667 11.125,97 C 9.43178,96.153 7.76511,95.32 6.125,94.5 Z" /></g>
