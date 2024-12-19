@@ -18,7 +18,7 @@
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
         
-            .desc-2 {
+            .sub_title {
                 color: #0078ff;
                 font-size: 1rem;
                 font-weight: bold;
@@ -122,19 +122,19 @@
         <!-- 나의 랭킹 아이콘(2) SVG -->
         <g><path style="opacity:1" fill="#b6d7fd" d="M 521.5,189.5 C 524.14,188.18 526.807,186.847 529.5,185.5C 530.498,176.859 530.831,168.192 530.5,159.5C 525.21,160.641 520.21,162.641 515.5,165.5C 515.511,164.559 515.011,163.892 514,163.5C 511.194,164.57 508.527,165.903 506,167.5C 505.5,176.16 505.334,184.827 505.5,193.5C 503.089,193.863 501.589,192.863 501,190.5C 500.333,182.5 500.333,174.5 501,166.5C 508.173,162.246 515.507,158.246 523,154.5C 525.304,156.068 527.804,157.235 530.5,158C 531.126,158.75 531.626,159.584 532,160.5C 532.667,168.5 532.667,176.5 532,184.5C 529.292,187.111 526.125,189.111 522.5,190.5C 521.893,190.376 521.56,190.043 521.5,189.5 Z"/></g>
 
-            <text text-anchor="middle" x="80" y="45" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >정복 중인 레벨</text>
-            <text text-anchor="middle" x="50" y="85" class="desc" stroke="#none" stroke-width="1" >1</text>
-            <text text-anchor="middle" x="80" y="85" class="desc-2" stroke="#none" stroke-width="1" >레벨</text>
+            <text text-anchor="middle" x="80" y="45" class="title" style="fill:#0078ff;">정복 중인 레벨</text>
+            <text text-anchor="middle" x="50" y="85" class="desc">1</text>
+            <text text-anchor="middle" x="80" y="85" class="sub_title">레벨</text>
             
-            <text text-anchor="middle" x="340" y="45" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >현재 점수</text>
-            <text text-anchor="middle" x="360" y="85" class="desc" stroke="#none" stroke-width="1" >1,498</text>
+            <text text-anchor="middle" x="340" y="45" class="title" style="fill:#0078ff;">현재 점수</text>
+            <text text-anchor="middle" x="360" y="85" class="desc">1,498</text>
             
-            <text text-anchor="middle" x="90" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >해결한 코딩 테스트</text>
-            <text text-anchor="middle" x="65" y="190" class="desc" stroke="#none" stroke-width="1" >231</text>
-            <text text-anchor="middle" x="120" y="190" class="desc-2" stroke="#none" stroke-width="1" >문제</text>
+            <text text-anchor="middle" x="90" y="150" class="title" style="fill:#0078ff;">해결한 코딩 테스트</text>
+            <text text-anchor="middle" x="65" y="190" class="desc">231</text>
+            <text text-anchor="middle" x="120" y="190" class="sub_title">문제</text>
             
-            <text text-anchor="middle" x="340" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >나의 랭킹</text>
-            <text text-anchor="middle" x="370" y="190" class="desc" stroke="#none" stroke-width="1" >15,828</text>
-            <text text-anchor="middle" x="450" y="190" class="desc-2" stroke="#none" stroke-width="1" >위</text>
+            <text text-anchor="middle" x="340" y="150" class="title" style="fill:#0078ff;">나의 랭킹</text>
+            <text text-anchor="middle" x="370" y="190" class="desc">15,828</text>
+            <text text-anchor="middle" x="450" y="190" class="sub_title">위</text>
         </svg>
         
