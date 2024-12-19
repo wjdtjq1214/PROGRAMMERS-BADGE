@@ -11,38 +11,39 @@ export const getMiniSvgStr = (userData: UserData): string => {
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
         <style>
-            .title {
-                color: #0078ff;
-                font-size: 1.25rem;
-                line-height: 1.5rem;
-                font-weight: bold;
-                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-            }
-        
-            .desc {
+            .title_no {
                 color: #ffffff;
                 font-size: 3rem;
-                font-weight: bold;
-                line-height: 4.5rem;
-                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-            }
-        
-            .desc-2 {
-                color: #ffffff;
-                font-size: 1rem;
-                font-weight: bold;
-                line-height: 1.5rem;
-                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-weight: 700;
+                font-family: 'Noto Sans KR', sans-serif;
+                animation: delayFadeIn 2s ease-in-out forwards;
             }
 
-            .desc-3 {
+            .title_id {
                 color: #ffffff;
-                font-size: 1rem;
-                line-height: 1.5rem;
-                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-size: 1.3rem;
+                font-weight: 700;
+                font-family: 'Noto Sans KR', sans-serif;
+                animation: fadeIn 1s ease-in-out forwards
             }
         
-            .text, .desc {
+            .sub_title {
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 500;
+                font-family: 'Noto Sans KR', sans-serif;
+                animation: delayFadeIn 2s ease-in-out forwards;
+            }
+
+            .value {
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 400;
+                font-family: 'Noto Sans KR', sans-serif;
+                animation: delayFadeIn 2s ease-in-out forwards;
+            }
+        
+            .text, .title_no {
                 animation: twinkling 4s ease-in-out infinite;
             }
         
@@ -53,6 +54,17 @@ export const getMiniSvgStr = (userData: UserData): string => {
                 70% { opacity: 0.5; }
                 80% { opacity: 1; }
             };
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
+            @keyframes delayFadeIn {
+                0% { opacity: 0; }
+                80% { opacity: 0; }
+                100% { opacity: 1; }
+            }
 
         </style>
         
@@ -77,18 +89,24 @@ export const getMiniSvgStr = (userData: UserData): string => {
             d="M 15,0 L 335,0 Q 370,0 370,30 L 370,140 Q 370,170 335,170 L 15,170 Q 0,170 0,140 L 0,30 Q 0,0 15,0 Z"
         />
 
-        <text text-anchor="middle" dominant-baseline="middle" x="50" y="85" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
+        <text text-anchor="middle" dominant-baseline="middle" x="50" y="85" class="title_no">${userData.skillCheck.level}</text>
 
-        <text text-anchor="start" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >${userData.name}</text>
+        <text text-anchor="start" x="110" y="60" class="title_id" style="fill:#0078ff;">${userData.name}</text>
 
-        <text text-anchor="start" x="110" y="100" class="desc-2" stroke="#none" stroke-width="1" >Score</text>
-        <text text-anchor="start" x="220" y="100" class="desc-3" stroke="#none" stroke-width="1" >${userData.career.score.toLocaleString()}</text>
+        <g style="animation-delay: 200ms;">
+            <text text-anchor="start" x="110" y="100" class="sub_title">Score</text>
+            <text text-anchor="start" x="220" y="100" class="value">${userData.career.score.toLocaleString()}</text>
+        </g>
 
-        <text text-anchor="start" x="110" y="120" class="desc-2" stroke="#none" stroke-width="1" >Solved</text>
-        <text text-anchor="start" x="220" y="120" class="desc-3" stroke="#none" stroke-width="1" >${userData.codingTest.solved.toLocaleString()}</text>
+        <g style="animation-delay: 400ms;">
+            <text text-anchor="start" x="110" y="120" class="sub_title">Solved</text>
+            <text text-anchor="start" x="220" y="120" class="value">${userData.codingTest.solved.toLocaleString()}</text>
+        </g>
 
-        <text text-anchor="start" x="110" y="140" class="desc-2" stroke="#none" stroke-width="1" >Rank</text>
-        <text text-anchor="start" x="220" y="140" class="desc-3" stroke="#none" stroke-width="1" >${userData.ranking.rank.toLocaleString()}</text>
+        <g style="animation-delay: 600ms;">
+            <text text-anchor="start" x="110" y="140" class="sub_title">Rank</text>
+            <text text-anchor="start" x="220" y="140" class="value">${userData.ranking.rank.toLocaleString()}</text>
+        </g>
 
         </svg>
         `;
@@ -121,7 +139,7 @@ export const getFullSvgStr = (userData: UserData): string => {
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
         
-            .desc-2 {
+            .sub_title {
                 color: #0078ff;
                 font-size: 1rem;
                 font-weight: bold;
@@ -225,20 +243,20 @@ export const getFullSvgStr = (userData: UserData): string => {
         <!-- 나의 랭킹 아이콘(2) SVG -->
         <g><path style="opacity:1" fill="#b6d7fd" d="M 521.5,189.5 C 524.14,188.18 526.807,186.847 529.5,185.5C 530.498,176.859 530.831,168.192 530.5,159.5C 525.21,160.641 520.21,162.641 515.5,165.5C 515.511,164.559 515.011,163.892 514,163.5C 511.194,164.57 508.527,165.903 506,167.5C 505.5,176.16 505.334,184.827 505.5,193.5C 503.089,193.863 501.589,192.863 501,190.5C 500.333,182.5 500.333,174.5 501,166.5C 508.173,162.246 515.507,158.246 523,154.5C 525.304,156.068 527.804,157.235 530.5,158C 531.126,158.75 531.626,159.584 532,160.5C 532.667,168.5 532.667,176.5 532,184.5C 529.292,187.111 526.125,189.111 522.5,190.5C 521.893,190.376 521.56,190.043 521.5,189.5 Z"/></g>
 
-            <text text-anchor="middle" x="80" y="45" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >정복 중인 레벨</text>
-            <text text-anchor="middle" x="50" y="85" class="desc" stroke="#none" stroke-width="1" >${userData.skillCheck.level}</text>
-            <text text-anchor="middle" x="80" y="85" class="desc-2" stroke="#none" stroke-width="1" >레벨</text>
+            <text text-anchor="middle" x="80" y="45" class="title" style="fill:#0078ff;">정복 중인 레벨</text>
+            <text text-anchor="middle" x="50" y="85" class="desc">${userData.skillCheck.level}</text>
+            <text text-anchor="middle" x="80" y="85" class="sub_title">레벨</text>
             
-            <text text-anchor="middle" x="340" y="45" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >현재 점수</text>
-            <text text-anchor="middle" x="360" y="85" class="desc" stroke="#none" stroke-width="1" >${userData.ranking.score.toLocaleString('ko-KR')}</text>
+            <text text-anchor="middle" x="340" y="45" class="title" style="fill:#0078ff;">현재 점수</text>
+            <text text-anchor="middle" x="360" y="85" class="desc">${userData.ranking.score.toLocaleString('ko-KR')}</text>
             
-            <text text-anchor="middle" x="90" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >해결한 코딩 테스트</text>
-            <text text-anchor="middle" x="65" y="190" class="desc" stroke="#none" stroke-width="1" >${userData.codingTest.solved}</text>
-            <text text-anchor="middle" x="120" y="190" class="desc-2" stroke="#none" stroke-width="1" >문제</text>
+            <text text-anchor="middle" x="90" y="150" class="title" style="fill:#0078ff;">해결한 코딩 테스트</text>
+            <text text-anchor="middle" x="65" y="190" class="desc">${userData.codingTest.solved}</text>
+            <text text-anchor="middle" x="120" y="190" class="sub_title">문제</text>
             
-            <text text-anchor="middle" x="340" y="150" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >나의 랭킹</text>
-            <text text-anchor="middle" x="370" y="190" class="desc" stroke="#none" stroke-width="1" >${userData.ranking.rank.toLocaleString('ko-KR')}</text>
-            <text text-anchor="middle" x="450" y="190" class="desc-2" stroke="#none" stroke-width="1" >위</text>
+            <text text-anchor="middle" x="340" y="150" class="title" style="fill:#0078ff;">나의 랭킹</text>
+            <text text-anchor="middle" x="370" y="190" class="desc">${userData.ranking.rank.toLocaleString('ko-KR')}</text>
+            <text text-anchor="middle" x="450" y="190" class="sub_title">위</text>
         </svg>
         `;
 };
