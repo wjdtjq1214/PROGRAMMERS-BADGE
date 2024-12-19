@@ -14,7 +14,7 @@
                 color: #0078ff;
                 font-size: 1rem;
                 font-weight: bold;
-                line-height: 1.5rem;
+                line-height: 2.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
         
@@ -22,6 +22,13 @@
                 color: #0078ff;
                 font-size: 1rem;
                 font-weight: bold;
+                line-height: 1.5rem;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+            }
+
+            .desc-3 {
+                color: #0078ff;
+                font-size: 1rem;
                 line-height: 1.5rem;
                 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
             }
@@ -43,12 +50,15 @@
         <g><path style="opacity:1" fill="none" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
 
         <!-- 색상 배경 SVG -->
-        <g><path style="opacity:1" fill="#ecf5ff" d="M 0,0 C 116.667,0 233.333,0 350,0 C 350,56.667 350,113.333 350,170 C 233.333,170 116.667,170 0,170 Z"/></g>
+        <g><path style="opacity:1" fill="#ecf5ff" d="d="M 15,0 L 335,0 Q 350,0 350,15 L 350,155 Q 350,170 335,170 L 15,170 Q 0,170 0,155 L 0,15 Q 0,0 15,0 Z"/></g>
 
-        <text text-anchor="middle" x="115" y="40" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >JH8459</text>
+        <text text-anchor="middle" x="50" y="65" class="desc-2" stroke="#none" stroke-width="1" >level</text>
+        <text text-anchor="middle" x="60" y="100" class="desc" stroke="#none" stroke-width="1" >1</text>
 
-        <text text-anchor="middle" x="50" y="80" class="desc-2" stroke="#none" stroke-width="1" >level </text>
-        <text text-anchor="middle" x="80" y="80" class="desc" stroke="#none" stroke-width="1" >1</text>
+        <text text-anchor="middle" x="110" y="60" class="title" style="fill:#0078ff;" stroke="#none" stroke-width="1" >JH8459</text>
+
+        <text text-anchor="middle" x=110" y="90" class="desc-2" stroke="#none" stroke-width="1" >rank</text>
+        <text text-anchor="middle" x="160" y="90" class="desc-3" stroke="#none" stroke-width="1" >15828</text>
 
         </svg>
         
