@@ -68,36 +68,32 @@ export const getSvgStr = (userData: UserData): string => {
         </defs>
         <rect width="350" height="170" rx="10" ry="10" fill="url(#grad)"/>
 
-        <line x1="34" y1="50" x2="34" y2="105" stroke-width="2" stroke="white">
-            <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="50 ; 50 ; 105"/>
+        <line x1="34" y1="60" x2="34" y2="115" stroke-width="2" stroke="white">
+            <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="60 ; 60 ; 115"/>
         </line>
 
-        <line x1="34" y1="105" x2="67" y2="125" stroke-width="2" stroke="white">
+        <line x1="34" y1="115" x2="67" y2="135" stroke-width="2" stroke="white">
             <animate attributeName="x2" dur="1s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="34 ; 34 ; 67"/>
-
-            <animate attributeName="y2" dur="1s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="105 ; 105 ; 125"/>
+            <animate attributeName="y2" dur="1s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="115 ; 115 ; 135"/>
         </line>
 
-        <line x1="67" y1="125" x2="100" y2="105" stroke-width="2" stroke="white">
+        <line x1="67" y1="135" x2="100" y2="115" stroke-width="2" stroke="white">
             <animate attributeName="x2" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.83333 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 100"/>
-
-            <animate attributeName="y2" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.83333 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="125 ; 125 ; 105"/>
+            <animate attributeName="y2" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.83333 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="135 ; 135 ; 115"/>
         </line>
 
-        <line x1="100" y1="105" x2="100" y2="50" stroke-width="2" stroke="white">
-            <animate attributeName="y2" dur="1.5s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="105 ; 105 ; 50"/>
+        <line x1="100" y1="115" x2="100" y2="60" stroke-width="2" stroke="white">
+            <animate attributeName="y2" dur="1.5s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.8 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="115 ; 115 ; 60"/>
         </line>
 
-        <line x1="67" y1="130" x2="34" y2="110" stroke-width="2" stroke="white">
+        <line x1="67" y1="140" x2="34" y2="120" stroke-width="2" stroke="white">
             <animate attributeName="x2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 34"/>
-
-            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="130 ; 130 ; 110"/>
+            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="140 ; 140 ; 120"/>
         </line>
 
-        <line x1="67" y1="130" x2="100" y2="110" stroke-width="2" stroke="white">
+        <line x1="67" y1="140" x2="100" y2="120" stroke-width="2" stroke="white">
             <animate attributeName="x2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="67 ; 67 ; 100"/>
-
-            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="130 ; 130 ; 110"/>
+            <animate attributeName="y2" dur="1.9s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.78947 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="140 ; 140 ; 120"/>
         </line>
 
         <g class="group">
