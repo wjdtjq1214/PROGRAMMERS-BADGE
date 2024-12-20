@@ -68,7 +68,7 @@ export const getSvgStr = (userData: UserData): string => {
         </defs>
         <rect width="350" height="170" rx="10" ry="10" fill="url(#grad)"/>
 
-        <line x1="34" y1="50" x2="34" y2="105" stroke-width="2" stroke="white">
+        <line x1="34" y1="60" x2="34" y2="115" stroke-width="2" stroke="white">
             <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="50 ; 50 ; 105"/>
         </line>
 
