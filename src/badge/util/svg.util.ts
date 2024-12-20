@@ -101,25 +101,25 @@ export const getSvgStr = (userData: UserData): string => {
 
             <text text-anchor="middle" dominant-baseline="middle" x="65" y="95" class="title_no" style="fill:#ffffff;">${userData.skillCheck.level}</text>
 
-            <text text-anchor="start" x="150" y="60" class="title_id" style="fill:#ffffff;">${userData.name}</text>
+            <text text-anchor="start" x="150" y="55" class="title_id" style="fill:#ffffff;">${userData.name}</text>
         </g>
 
         <g class="group">
-            <text text-anchor="start" x="150" y="100" class="sub_title" style="fill:#ffffff;">Score</text>
+            <text text-anchor="start" x="150" y="95" class="sub_title" style="fill:#ffffff;">Score</text>
 
-            <text text-anchor="start" x="240" y="100" class="value" style="fill:#ffffff;">${userData.ranking.score.toLocaleString()}</text>
+            <text text-anchor="start" x="240" y="95" class="value" style="fill:#ffffff;">${userData.ranking.score.toLocaleString()}</text>
         </g>
 
         <g class="group">
-            <text text-anchor="start" x="150" y="120" class="sub_title" style="fill:#ffffff;">Solved</text>
+            <text text-anchor="start" x="150" y="115" class="sub_title" style="fill:#ffffff;">Solved</text>
 
-            <text text-anchor="start" x="240" y="120" class="value" style="fill:#ffffff;">${userData.codingTest.solved.toLocaleString()}</text>
+            <text text-anchor="start" x="240" y="115" class="value" style="fill:#ffffff;">${userData.codingTest.solved.toLocaleString()}</text>
         </g>
 
         <g class="group">
-            <text text-anchor="start" x="150" y="140" class="sub_title" style="fill:#ffffff;">Rank</text>
+            <text text-anchor="start" x="150" y="135" class="sub_title" style="fill:#ffffff;">Rank</text>
 
-            <text text-anchor="start" x="240" y="140" class="value" style="fill:#ffffff;">${userData.ranking.rank.toLocaleString()}</text>
+            <text text-anchor="start" x="240" y="135" class="value" style="fill:#ffffff;">${userData.ranking.rank.toLocaleString()}</text>
         </g>
 
         </svg>
