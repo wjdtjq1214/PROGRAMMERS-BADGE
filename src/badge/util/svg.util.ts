@@ -1,6 +1,7 @@
 import { UserData } from '../../interface/programmers.interface';
 import * as fs from 'fs';
 import * as path from 'path';
+import { Color } from '../../interface/color.interface';
 
 /**
  * 뱃지(미니) SVG 문자열 생성 메소드
@@ -9,12 +10,22 @@ import * as path from 'path';
  * @returns {string}
  */
 export const getSvgStr = (userData: UserData): string => {
+  const colors: Color = [
+    { start: '#F49347;', middle: '#984400;', end: '#492000;' }, // 0레벨 Bronze
+    { start: '#939195;', middle: '#6B7E91;', end: '#1F354A;' }, // 1레벨 Silver
+    { start: '#FFC944;', middle: '#FFAF44;', end: '#FF9632;' }, // 2레벨 Gold
+    { start: '#8CC584;', middle: '#45B2D3;', end: '#51A795;' }, // 3레벨 Platinum
+    { start: '#96B8DC;', middle: '#3EA5DB;', end: '#4D6399;' }, // 4레벨 Diamond
+    { start: '#E45B62;', middle: '#E14476;', end: '#CA0059;' }, // 5레벨 Ruby
+  ];
   const imagePath = path.join(__dirname, '../../../static/skill_check.png');
   const imageBase64 = fs.readFileSync(imagePath, 'base64');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <!-- CSS -->
         <style>
             .title_no {
                 font-size: 3rem;
@@ -49,19 +60,18 @@ export const getSvgStr = (userData: UserData): string => {
                 80% { opacity: 0; }
                 100% { opacity: 1; }
             }
-
         </style>
         
-        <!-- 색상 배경 -->
+        <!-- 그라데이션 색상 -->
         <defs>
-            <linearGradient xmlns="http://www.w3.org/2000/svg" id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
-                <stop offset="10%" style="stop-color: #808080;stop-opacity:1">
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+                <stop offset="10%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].start}stop-opacity:1">
                     <animate attributeName="stop-opacity" values="0.7; 0.73; 0.9 ; 0.97; 1; 0.97; 0.9; 0.73; 0.7;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
-                <stop offset="55%" style="stop-color: #4e4e4e;stop-opacity:1">
+                <stop offset="55%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].middle}stop-opacity:1">
                     <animate attributeName="stop-opacity" values="1; 0.95; 0.93; 0.95; 1;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
-                <stop offset="100%" style="stop-color: #3c3c3c;stop-opacity:1">
+                <stop offset="100%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].end}stop-opacity:1">
                     <animate attributeName="stop-opacity" values="1; 0.97; 0.9; 0.83; 0.8; 0.83; 0.9; 0.97; 1;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
             </linearGradient>
