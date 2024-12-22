@@ -109,7 +109,7 @@ export const getSvgStr = (userData: UserData): string => {
         <g class="group">
             <image href="data:image/png;base64,${imageBase64}" x="15" y="15" height="50px" width="100px"/>
 
-            <text text-anchor="middle" dominant-baseline="middle" x="67.5" y="95" class="title_no" style="fill:#ffffff;">${userData.skillCheck?.level ?? 0}</text>
+            <text text-anchor="middle" dominant-baseline="middle" x="66.5" y="95" class="title_no" style="fill:#ffffff;">${userData.skillCheck?.level ?? 0}</text>
 
             <text text-anchor="start" x="160" y="55" class="title_id" style="fill:#ffffff;">${userData.name}</text>
         </g>
