@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350px" height="170px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <!-- CSS -->
         <style>
             .title_no {
                 font-size: 3rem;
@@ -35,19 +37,18 @@
                 80% { opacity: 0; }
                 100% { opacity: 1; }
             }
-
         </style>
         
-        <!-- 색상 배경 -->
+        <!-- 그라데이션 색상 -->
         <defs>
-            <linearGradient xmlns="http://www.w3.org/2000/svg" id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
-                <stop offset="10%" style="stop-color: #808080;stop-opacity:1">
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+                <stop offset="10%" style="stop-color: #939195;stop-opacity:1">
                     <animate attributeName="stop-opacity" values="0.7; 0.73; 0.9 ; 0.97; 1; 0.97; 0.9; 0.73; 0.7;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
-                <stop offset="55%" style="stop-color: #4e4e4e;stop-opacity:1">
+                <stop offset="55%" style="stop-color: #6B7E91;stop-opacity:1">
                     <animate attributeName="stop-opacity" values="1; 0.95; 0.93; 0.95; 1;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
-                <stop offset="100%" style="stop-color: #3c3c3c;stop-opacity:1">
+                <stop offset="100%" style="stop-color: #1F354A;stop-opacity:1">
                     <animate attributeName="stop-opacity" values="1; 0.97; 0.9; 0.83; 0.8; 0.83; 0.9; 0.97; 1;" dur="4s" repeatCount="indefinite" repeatDur="01:00"/>
                 </stop>
             </linearGradient>
