@@ -1,4 +1,4 @@
-![bronze](https://github.com/user-attachments/assets/67375ed3-bc98-4b09-94e0-bf2e8abc1a4c)## 🤖 프로그래머스 랭킹 뱃지 자동 생성 봇
+## 🤖 프로그래머스 랭킹 뱃지 자동 생성 봇
 
 아래의 두 레퍼런스 프로젝트를 **참고**하여 만들었습니다. 🔍
 
@@ -30,17 +30,41 @@ Github 프로필에서 프로그래머스 프로필 뱃지를 이쁘게 보여�
 
 ## 🔎 결과물 미리보기
 
-기본형과 MINI 프로필 뱃지를 제공합니다. **(🚧 MINI 프로필 뱃지는 작업중입니다!)**
+- 스킬 체크 레벨을 기반으로 프로필 색상이 변경됩니다.
+- 프로필 뱃지 유형은 기본형과 MINI 두가지 유형을 제공합니다. **(🚧 MINI 프로필 뱃지는 작업중입니다!)**
 
-<details>
-  <summary>기본형</summary>
+<br/>
 
-</details>
+#### 기본형
 
-<details>
-  <summary><del>MINI</del></summary>
+- 0 레벨 🍂
+
+  ![0](https://github.com/user-attachments/assets/67375ed3-bc98-4b09-94e0-bf2e8abc1a4c)
+
+- 1 레벨 💍
+
+  ![1](https://github.com/user-attachments/assets/87a898b2-07f0-4d57-9dda-73d420fb85c3)
+
+- 2 레벨 🏅
+
+  ![2](https://github.com/user-attachments/assets/37a5507c-5363-4223-8f55-1b52babff55c)
+
+- 3 레벨 💚
+
+  ![3](https://github.com/user-attachments/assets/9bea1ddb-4f32-4530-be3e-c6c219e82848)
+
+- 4 레벨 💎
+
+  ![4](https://github.com/user-attachments/assets/246a209b-8f3a-4ec0-8567-350c3f3ef67e)
+        
+- 5 레벨 🍒
   
-</details>
+  ![5](https://github.com/user-attachments/assets/5fa40784-8e93-43da-99db-b6d145116cb2)
+
+<br/>
+<br/>
+
+#### <del>MINI</del>
 
 <br/>
 <br/>
