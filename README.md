@@ -1,67 +1,44 @@
-## 🤖 프로그래머스 랭킹 뱃지 자동 생성 봇
+![bronze](https://github.com/user-attachments/assets/67375ed3-bc98-4b09-94e0-bf2e8abc1a4c)## 🤖 프로그래머스 랭킹 뱃지 자동 생성 봇
 
-https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 만들었습니다.
+아래의 두 레퍼런스 프로젝트를 **참고**하여 만들었습니다. 🔍
+
+> - 프로그래머스 프로필 SVG 자동 생성 프로젝트 (https://github.com/libtv/github-programmers-rank)
+> - 백준 프로필 SVG 자동 생성 프로젝트 (https://github.com/mazassumnida/mazassumnida)
+
+<br/>
+<br/>
   
-깃허브 프로필에 사용할 목적의 프로그래머스 랭킹 뱃지(.svg)를 자동으로 생성하고 업데이트 합니다.
+Github 프로필에서 프로그래머스 프로필 뱃지를 이쁘게 보여주는 프로젝트입니다. 
   
-[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리를 트리거로 사용하므로 미리 설치되어 있어야합니다.
-  
-백준 허브에 연동된 상태에서 프로그래머스에서 알고리즘 풀이시 자동으로 뱃지가 생성되거나 업데이트됩니다.
 
 <br/>
 <br/>
 
 ## ⚠️ 전제 조건
 
-[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub) 익스텐션에 연동된 레포트지토리가 필요합니다.
+- [백준 허브](https://github.com/BaekjoonHub/BaekjoonHub) 익스텐션에 연동된 레포트지토리가 필요합니다.
+- 깃허브 **PAT(Personal Access Token)** 필요합니다.
 
-깃허브 **PAT(Personal Access Token)** 필요합니다.
+<br/> 
 
-<br/>
-<br/>
+[백준 허브](https://github.com/BaekjoonHub/BaekjoonHub)에 연동된 레포트지토리를 트리거로 사용하므로 미리 설치되어 있어야합니다. 
 
-## 🧠 동작 원리
-
-<details>
-  <summary>펼쳐보기</summary>
-
-  1. 프로그래머스에서 알고리즘 문제를 풀이합니다.
-  2. 백준 허브에 연동된 레포지토리에 자동으로 커밋됩니다.
-  
-      ![auto commit](https://github.com/user-attachments/assets/ce37c39f-abf1-4f0b-90d5-7eef5d116b9c)
-     
-  4. 백준 허브에 연동된 레포지토리에 커밋이 되면 미리 작성한 깃허브 액션이 동작합니다. (트리거를 동작시킬 간단한 액션입니다.)
-  
-     ![trigger action](https://github.com/user-attachments/assets/9438fa60-cbaf-4cce-8ed7-b0bfdccbba71)
-  
-  5. PROGRAMMERS-BADGE 레포지토리에 정의한 트리거 액션이 동작하며 미리 정의한 소스 코드가 동작하여 .svg 포맷의 프로그래머스 랭킹 뱃지가 자동 생성됩니다.
-</details>
+백준 허브가 연동된 이후 프로그래머스에서 알고리즘 풀이시 자동으로 뱃지가 생성되거나 업데이트됩니다.
 
 <br/>
 <br/>
 
 ## 🔎 결과물 미리보기
 
-기본형과 커스텀된 뱃지를 제공합니다. (커스텀 뱃지는 작업중입니다!)
+기본형과 MINI 프로필 뱃지를 제공합니다. **(🚧 MINI 프로필 뱃지는 작업중입니다!)**
 
 <details>
   <summary>기본형</summary>
 
-  <img width="450" height="180" src="https://raw.githubusercontent.com/JH8459/PROGRAMMERS-BADGE/master/static/result_full.svg"/>
 </details>
 
 <details>
-  <summary><del>기본형 (색상 Ver.)</del></summary>
-  
-</details>
-
-<details>
-  <summary><del>축소형</del></summary>
-  
-</details>
-
-<details>
-  <summary><del>축소형 (색상 Ver.)</del></summary>
+  <summary><del>MINI</del></summary>
   
 </details>
 
@@ -151,7 +128,7 @@ https://github.com/libtv/github-programmers-rank 레퍼런스를 참고하여 �
   - 위 과정에서 문제가 없었다면, PROGRAMMERS-BADGE 프로젝트에서 `static` 폴더에 .svg 포맷의 프로그래머스 랭킹 뱃지 결과물을 확인합니다.
   - 원하는 랭킹 뱃지 유형을 확인 후 깃허브 프로필에 링크를 붙혀넣습니다.
 
-    > https://raw.githubusercontent.com/{Github 계정명}/{레포지토리명}/master/static/result_full.svg
+    > https://raw.githubusercontent.com/{Github 계정명}/{레포지토리명}/master/static/result.svg
   
 <br/>
 <br/>
