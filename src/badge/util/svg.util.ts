@@ -10,7 +10,7 @@ import { Color } from '../../interface/color.interface';
  * @returns {string}
  */
 export const getSvgStr = (userData: UserData): string => {
-  userData.skillCheck.level = 3;
+  userData.skillCheck.level = 4;
 
   const colors: Color[] = [
     { start: '#F49347;', middle: '#984400;', end: '#492000;' }, // 0레벨 Bronze
