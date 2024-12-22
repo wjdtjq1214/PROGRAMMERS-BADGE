@@ -16,7 +16,7 @@ Github 프로필에서 프로그래머스 프로필 뱃지를 이쁘게 보여�
 
 ## ⚠️ 전제 조건
 
-- [백준 허브](https://github.com/BaekjoonHub/BaekjoonHub) 익스텐션에 연동된 레포트지토리가 필요합니다.
+- [백준 허브](https://github.com/BaekjoonHub/BaekjoonHub) 익스텐션에 연동된 레포지토리가 필요합니다.
 - 깃허브 **PAT(Personal Access Token)** 필요합니다.
 
 <br/> 
