@@ -212,7 +212,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
         <rect width="75" height="20" clip-path="url(#round-corner)" class="gray-area"/>
 
         <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(37.5, 11)">programmers</text>
-        <text class="tier" text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(92, 11)">LV.${userData.skillCheck?.level ?? 0}</text>
+        <text class="tier" text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(92, 11)">Lv.${userData.skillCheck?.level ?? 0}</text>
     </svg>
     `;
 };
