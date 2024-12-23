@@ -198,7 +198,7 @@ export const getMiniSvgStr = (userData: UserData): string => {
         
         <!-- 그라데이션 색상 -->
         <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="35%">
                 <stop offset="10%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].start}stop-opacity:1"/>
                 <stop offset="55%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].middle}stop-opacity:1"/>
                 <stop offset="100%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].end}stop-opacity:1"/>
