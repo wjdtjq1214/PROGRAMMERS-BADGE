@@ -55,6 +55,7 @@
         </defs>
         <rect width="350" height="170" rx="10" ry="10" fill="url(#grad)"/>
 
+        <!-- LINE -->
         <line x1="34" y1="60" x2="34" y2="115" stroke-width="2" stroke="white">
             <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="60 ; 60 ; 115"/>
         </line>
@@ -106,7 +107,7 @@
         <g class="group">
             <text text-anchor="start" x="160" y="135" class="sub_title" style="fill:#ffffff;">Rank</text>
 
-            <text text-anchor="start" x="250" y="135" class="value" style="fill:#ffffff;">13,984</text>
+            <text text-anchor="start" x="250" y="135" class="value" style="fill:#ffffff;">13,985</text>
         </g>
 
         </svg>
