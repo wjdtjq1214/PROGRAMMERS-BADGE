@@ -4,7 +4,7 @@ import * as path from 'path';
 import { Color } from '../../interface/color.interface';
 
 /**
- * 뱃지(미니) SVG 문자열 생성 메소드
+ * 뱃지 SVG 문자열 생성 메소드
  * @description 프로그래머스에서 받아온 데이터를 이용하여 뱃지 SVG 문자열을 반환합니다.
  * @param userData
  * @returns {string}
@@ -78,6 +78,7 @@ export const getSvgStr = (userData: UserData): string => {
         </defs>
         <rect width="350" height="170" rx="10" ry="10" fill="url(#grad)"/>
 
+        <!-- LINE -->
         <line x1="34" y1="60" x2="34" y2="115" stroke-width="2" stroke="white">
             <animate attributeName="y2" dur="0.8s" fill="freeze" calcMode="spline" keyTimes="0 ; 0.675 ; 1" keySplines="0 0 1 1 ; 0.5 0 0.5 1" values="60 ; 60 ; 115"/>
         </line>
@@ -134,4 +135,84 @@ export const getSvgStr = (userData: UserData): string => {
 
         </svg>
         `;
+};
+
+/**
+ * 뱃지 (미니) SVG 문자열 생성 메소드
+ * @description 프로그래머스에서 받아온 데이터를 이용하여 뱃지 SVG 문자열을 반환합니다.
+ * @param userData
+ * @returns {string}
+ */
+export const getMiniSvgStr = (userData: UserData): string => {
+  const colors: Color[] = [
+    { start: '#F49347;', middle: '#984400;', end: '#492000;' }, // 0레벨 Bronze
+    { start: '#939195;', middle: '#6B7E91;', end: '#1F354A;' }, // 1레벨 Silver
+    { start: '#FFC944;', middle: '#FFAF44;', end: '#FF9632;' }, // 2레벨 Gold
+    { start: '#8CC584;', middle: '#45B2D3;', end: '#51A795;' }, // 3레벨 Platinum
+    { start: '#96B8DC;', middle: '#3EA5DB;', end: '#4D6399;' }, // 4레벨 Diamond
+    { start: '#E45B62;', middle: '#E14476;', end: '#CA0059;' }, // 5레벨 Ruby
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20" width="110" version="1.1" xml:space="preserve">
+
+        <!-- CSS -->
+        <style>
+            <![CDATA[
+                @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=block');
+                @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                @keyframes rateBarAnimation {
+                    from {
+                        stroke-dashoffset: 57.95;
+                    }
+                    to {
+                        stroke-dashoffset: 35;
+                    }
+                }
+                .background {
+                    fill: url(#grad1);
+                }
+                text {
+                    fill: white;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    font-size: 0.7em;
+                }
+                .gray-area {
+                    fill: #555555;
+                }
+                .tier {
+                    font-weight: 700;
+                    font-size: 0.78em;
+                }
+            ]]>
+        </style>
+        
+        <!-- 그라데이션 색상 -->
+        <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+                <stop offset="10%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].start}stop-opacity:1"/>
+                <stop offset="55%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].middle}stop-opacity:1"/>
+                <stop offset="100%" style="stop-color: ${colors[userData.skillCheck?.level ?? 0].end}stop-opacity:1"/>
+            </linearGradient>
+            <clipPath id="round-corner">
+                <rect x="0" y="0" width="110" height="20" rx="3" ry="3"/>
+            </clipPath>
+        </defs>
+        
+        <rect width="40" height="20" x="70" y="0" rx="3" ry="3" class="background"/>
+        <rect width="75" height="20" clip-path="url(#round-corner)" class="gray-area"/>
+
+        <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(37.5, 11)">programmers</text>
+        <text class="tier" text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(92, 11)">${userData.skillCheck?.level ?? 0}</text>
+    </svg>
+    `;
 };

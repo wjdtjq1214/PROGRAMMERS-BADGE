@@ -3,7 +3,7 @@ import { ProgrammersService } from '../programmers/programmers.service';
 import * as fs from 'fs';
 import * as path from 'path';
 import { UserData } from '../interface/programmers.interface';
-import { getSvgStr } from './util/svg.util';
+import { getMiniSvgStr, getSvgStr } from './util/svg.util';
 import { commitFile } from './util/commit.util';
 import { ConfigService } from '@nestjs/config';
 
@@ -32,15 +32,19 @@ export class BadgeService {
       await this.programmersService.getProgrammersRecordInfo();
 
     const svgStr: string = getSvgStr(userData);
+    const svgStrMini: string = getMiniSvgStr(userData);
 
     const staticDir = path.join(__dirname, '../../static');
-    const svgPath = path.join(staticDir, 'result.svg');
 
     if (!fs.existsSync(staticDir)) {
       fs.mkdirSync(staticDir, { recursive: true });
     }
 
+    const svgPath = path.join(staticDir, 'result.svg');
+    const svgMiniPath = path.join(staticDir, 'result_mini.svg');
+
     fs.writeFileSync(svgPath, svgStr);
+    fs.writeFileSync(svgMiniPath, svgStrMini);
 
     this.loggerService.log('✅ Create Programmers badge success');
 
