@@ -57,6 +57,6 @@
         <rect width="75" height="20" clip-path="url(#round-corner)" class="gray-area"/>
 
         <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(37.5, 11)">programmers</text>
-        <text class="tier" text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(92, 11)">LV.1</text>
+        <text class="tier" text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" transform="translate(92, 11)">Lv.1</text>
     </svg>
     
