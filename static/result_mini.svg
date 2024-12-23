@@ -43,7 +43,7 @@
         
         <!-- 그라데이션 색상 -->
         <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="35%">
                 <stop offset="10%" style="stop-color: #939195;stop-opacity:1"/>
                 <stop offset="55%" style="stop-color: #6B7E91;stop-opacity:1"/>
                 <stop offset="100%" style="stop-color: #1F354A;stop-opacity:1"/>
