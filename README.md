@@ -66,19 +66,18 @@ Github 프로필에서 프로그래머스 프로필 뱃지를 이쁘게 보여�
 
 #### MINI
 
-- 0 레벨 🍂
+- ![0](https://github.com/user-attachments/assets/d99c01c5-6c07-4ee4-920f-fc8e7aedd59b)
 
-- 1 레벨 💍
-  - ![1](https://github.com/user-attachments/assets/8ba5e78c-b6e6-4696-8813-3b6b45ce1350)
-  
+- ![1](https://github.com/user-attachments/assets/8ba5e78c-b6e6-4696-8813-3b6b45ce1350)
 
-- 2 레벨 🏅
+- ![2](https://github.com/user-attachments/assets/99b1f14b-8464-44a4-a124-6f2fc76ba1d9)
 
-- 3 레벨 💚
+- ![3](https://github.com/user-attachments/assets/c739ac61-a177-4144-b682-1fef43f5b4a5)
 
-- 4 레벨 💎
+- ![4](https://github.com/user-attachments/assets/f4516599-931e-4a77-962e-33ab2504ac1f)
         
-- 5 레벨 🍒
+- ![5](https://github.com/user-attachments/assets/93764c39-942f-4190-938a-20c48fb9f49a)
+
   
 
 <br/>
