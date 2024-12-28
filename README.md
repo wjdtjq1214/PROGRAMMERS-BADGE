@@ -64,9 +64,22 @@ Github 프로필에서 프로그래머스 프로필 뱃지를 이쁘게 보여�
 <br/>
 <br/>
 
-#### <del>MINI</del>
+#### MINI
 
-- **🚧 MINI 프로필 뱃지는 작업중입니다!**
+- 0 레벨 🍂
+
+- 1 레벨 💍
+  - ![1](https://github.com/user-attachments/assets/8ba5e78c-b6e6-4696-8813-3b6b45ce1350)
+  
+
+- 2 레벨 🏅
+
+- 3 레벨 💚
+
+- 4 레벨 💎
+        
+- 5 레벨 🍒
+  
 
 <br/>
 <br/>
