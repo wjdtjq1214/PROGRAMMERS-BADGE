@@ -31,7 +31,7 @@ export class BadgeService {
     const userData: UserData =
       await this.programmersService.getProgrammersRecordInfo();
 
-    userData.skillCheck.level = 4;
+    userData.skillCheck.level = 5;
 
     const svgStr: string = getSvgStr(userData);
     const svgStrMini: string = getMiniSvgStr(userData);
