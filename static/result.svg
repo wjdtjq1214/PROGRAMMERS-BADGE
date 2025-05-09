@@ -101,13 +101,13 @@
         <g class="group">
             <text text-anchor="start" x="160" y="115" class="sub_title" style="fill:#ffffff;">Solved</text>
 
-            <text text-anchor="start" x="250" y="115" class="value" style="fill:#ffffff;">409</text>
+            <text text-anchor="start" x="250" y="115" class="value" style="fill:#ffffff;">410</text>
         </g>
 
         <g class="group">
             <text text-anchor="start" x="160" y="135" class="sub_title" style="fill:#ffffff;">Rank</text>
 
-            <text text-anchor="start" x="250" y="135" class="value" style="fill:#ffffff;">1,880</text>
+            <text text-anchor="start" x="250" y="135" class="value" style="fill:#ffffff;">1,882</text>
         </g>
 
         </svg>
